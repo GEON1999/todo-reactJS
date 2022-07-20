@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import ToDoList from "./components/ToDoList";
+import React from "react";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -37,8 +38,8 @@ footer, header, hgroup, main, menu, nav, section {
 body {
   line-height: 1;
   font-family: sans-serif;
-  background-color: ${(props) => props.theme.bgColor};
-  color: ${(props) => props.theme.textColor};
+  background-color: grey;
+  color: white;
 }
 menu, ol, ul {
   list-style: none;
@@ -66,10 +67,12 @@ a {
 
 function App() {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <>
       <GlobalStyle />
-      <ToDoList />
-    </BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <ToDoList />
+      </BrowserRouter>
+    </>
   );
 }
 // <ReactQueryDevtools initialIsOpen={true} /> exist for  <GlobalStyle />&<Router /> not to load api every time and also provide devtools
