@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
 import ToDoList from "./components/ToDoList";
 
@@ -65,10 +66,10 @@ a {
 
 function App() {
   return (
-    <>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <GlobalStyle />
       <ToDoList />
-    </>
+    </BrowserRouter>
   );
 }
 // <ReactQueryDevtools initialIsOpen={true} /> exist for  <GlobalStyle />&<Router /> not to load api every time and also provide devtools
