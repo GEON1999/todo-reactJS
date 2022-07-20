@@ -1,6 +1,8 @@
 import { atom, selector } from "recoil";
 import { recoilPersist } from "recoil-persist";
 
+const { persistAtom } = recoilPersist();
+
 export enum Categories {
   "TO_DO" = "TO_DO",
   "DOING" = "DOING",
@@ -8,8 +10,6 @@ export enum Categories {
 }
 // enum can save "TO_DO" , "DOING" , "DONE" and i can use it like
 // Categories.TO_DO. so it help no to make mistake
-
-const { persistAtom } = recoilPersist();
 
 export interface IToDo {
   text: string;
