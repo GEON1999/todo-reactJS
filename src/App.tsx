@@ -69,9 +69,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
-        <ToDoList />
-      </BrowserRouter>
+
+      <ToDoList />
     </>
   );
 }
