@@ -58,7 +58,9 @@
     "@types/react-helmet": "^6.1.4",
     "@types/react-query": "^1.2.9",
     "@types/react-router-dom": "^5.3.1",
-    "@types/styled-components": "^5.1.15"
+    "@types/styled-components": "^5.1.15",
+    "json5": "^2.2.3",
+    "loader-utils": "^3.2.1"
   },
   "homepage": "https://geon1999.github.io/todo-reactJS"
 }
